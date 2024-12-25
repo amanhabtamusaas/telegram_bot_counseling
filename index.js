@@ -67,6 +67,7 @@ bot.onText(/\/start/, (msg) => {
   }
 });
 
+
 // Handle button clicks
 bot.on("callback_query", (callbackQuery) => {
   const action = callbackQuery.data;
@@ -499,7 +500,7 @@ function handleRejection(counselorId) {
 
   delete pendingCounselors[counselorId];
 
-  bot.sendMessage(counselorId, "❌ Sorry, your request to become a counselor has been rejected.");
+  bot.sendMessage(counselorId, "❌ Sorry !, your request to become a counselor has been rejected.");
 
   ADMIN_IDS.forEach(adminId => {
       bot.sendMessage(adminId, `❌ Counselor ${counselorId} has been rejected.`);
