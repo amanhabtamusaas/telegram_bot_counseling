@@ -20,7 +20,7 @@ app.post(`/bot${process.env.TELEGRAM_BOT_TOKEN}`, (req, res) => {
 
 // Health check endpoint
 app.get("/", (req, res) => {
-  res.send("Bot is running!");
+  res.send("Bot is running now!");
 });
 
 // Start Express server
